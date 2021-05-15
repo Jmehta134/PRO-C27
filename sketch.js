@@ -37,6 +37,9 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background(200);
+  textSize(15);
+  fill(0);
+  text("press UP ARROW pull",width/2,70);
   roof.display();
   rope1.display();
   rope2.display();
@@ -55,6 +58,8 @@ function draw() {
 function keyPressed(){
 	if (keyCode === UP_ARROW) {
 		Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-10,y:-5});
+    fill(0);
+    text("press DOWN ARROW to leave",50,150);
 	} 
 }
 
